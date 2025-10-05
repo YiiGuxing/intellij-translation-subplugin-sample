@@ -15,6 +15,7 @@ import com.intellij.openapi.editor.impl.EditorCssFontResolver
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.openapi.util.Disposer
+import com.intellij.openapi.util.text.Strings
 import com.intellij.psi.PsiDocCommentBase
 import com.intellij.psi.PsiDocumentManager
 import com.intellij.ui.components.JBLoadingPanel
@@ -133,7 +134,7 @@ private class DocumentationDialog(private val project: Project) : DialogWrapper(
             """
               <html>
                 <body>
-                  <p style="color: red;">Translation failed: $message</p>
+                  <p style="color: red;">Translation failed: ${Strings.escapeXmlEntities(message)}</p>
                 </body>
               </html>
             """.trimIndent()
