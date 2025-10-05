@@ -24,7 +24,7 @@ Developers can use this project as a reference to create their own sub-plugins, 
 ## Notes
 
 1. The open API of **Intellij Translation Plugin** is still under development, so the extensible features for sub-plugins are limited.
-2. This project is only a sample for subplugin development; you may need to adjust it according to your actual requirements.
+2. This project is only a sample for subplugin development, you may need to adjust it according to your actual requirements.
 3. This project is not a template project and is not recommended for direct secondary development. Please use the official plugin template project [intellij-platform-plugin-template](https://github.com/JetBrains/intellij-platform-plugin-template) as the base, and refer to this project for guidance.
 
 ## Open API
@@ -43,7 +43,7 @@ The open API of **Intellij Translation Plugin** is located in the `cn.yiiguxing.
 
 ### Source Code
 
-The source code of the open API for **Intellij Translation Plugin** is bundled in the plugin ZIP release package.  
+The source code of the open API for **Intellij Translation Plugin** is bundled in the plugin ZIP distribution.  
 When you navigate to the relevant classes, if the IDE prompts that the source code cannot be found, you can manually add the source code:  
-Click the `Choose Sources...` link in the editor banner notification, and select the source code jar package (`src/*-src.jar`) bundled in the plugin ZIP release package.  
-Note: At this point, the IDE has already automatically navigated to the plugin ZIP release package.
+Click the `Choose Sources...` link in the editor banner notification, and select the source code jar package (`src/*-src.jar`) bundled in the plugin ZIP distribution.  
+Note: At this point, the IDE has already automatically navigated to the plugin ZIP distribution.
