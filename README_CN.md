@@ -30,18 +30,25 @@
 
 ## 开放 API
 
-**Intellij Translation Plugin** 的开放 API 位于 `cn.yiiguxing.plugin.translate.openapi` 包下，目前可用的服务与扩展点如下。
+**Intellij Translation Plugin** 的开放 API 位于 [`cn.yiiguxing.plugin.translate.openapi`][openapi-package] 包下，目前可用的服务与扩展点如下。
 
 ### 服务列表
 
-- `DocumentationTranslationService`：提供文档翻译服务
+- [`DocumentationTranslationService`][DocumentationTranslationService]：提供文档翻译服务
 
 ### 扩展点列表
 
-| 扩展点                                                         | 实现                                                                               |
-|-------------------------------------------------------------|----------------------------------------------------------------------------------|
-| `cn.yiiguxing.plugin.translate.documentation.elementFilter` | `cn.yiiguxing.plugin.translate.openapi.documentation.DocumentationElementFilter` |
+> 默认扩展命名空间（defaultExtensionNs）: `cn.yiiguxing.plugin.translate`
+
+| 扩展点                           | 实现                                                         |
+|-------------------------------|------------------------------------------------------------|
+| `documentation.elementFilter` | [`DocumentationElementFilter`][DocumentationElementFilter] |
 
 ### 源代码
 
 **Intellij Translation Plugin** 开放 API 的源代码已经捆绑在插件 ZIP 发行包中，当你导航到相关的类时，如果 IDE 提示找不到源代码，可以通过手动添加源代码：点击编辑器 banner 通知中的 `Choose Sources...` 链接，选择插件 ZIP 发行包中捆绑的源代码 jar 包（`src/*-src.jar`）即可。注意，此时 IDE 已经自动导航到插件 ZIP 发行包内。
+
+
+[openapi-package]: https://github.com/YiiGuxing/TranslationPlugin/tree/master/src/main/kotlin/cn/yiiguxing/plugin/translate/openapi
+[DocumentationTranslationService]: https://github.com/YiiGuxing/TranslationPlugin/blob/master/src/main/kotlin/cn/yiiguxing/plugin/translate/openapi/documentation/DocumentationTranslationService.kt
+[DocumentationElementFilter]: https://github.com/YiiGuxing/TranslationPlugin/blob/master/src/main/kotlin/cn/yiiguxing/plugin/translate/openapi/documentation/DocumentationElementFilter.kt

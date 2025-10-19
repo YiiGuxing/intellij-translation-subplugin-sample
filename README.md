@@ -29,17 +29,19 @@ Developers can use this project as a reference to create their own sub-plugins, 
 
 ## Open API
 
-The open API of **Intellij Translation Plugin** is located in the `cn.yiiguxing.plugin.translate.openapi` package. Currently available services and extension points are as follows.
+The open API of **Intellij Translation Plugin** is located in the [`cn.yiiguxing.plugin.translate.openapi`][openapi-package] package. Currently available services and extension points are as follows.
 
 ### Service List
 
-- `DocumentationTranslationService`: Provides documentation translation service
+- [`DocumentationTranslationService`][DocumentationTranslationService]: Provides documentation translation service
 
 ### Extension Point List
 
-| Extension Point                                             | Implementation                                                                   |
-|-------------------------------------------------------------|----------------------------------------------------------------------------------|
-| `cn.yiiguxing.plugin.translate.documentation.elementFilter` | `cn.yiiguxing.plugin.translate.openapi.documentation.DocumentationElementFilter` |
+> Default extensions namespace (defaultExtensionNs): `cn.yiiguxing.plugin.translate`
+
+| Extension Point               | Implementation                                             |
+|-------------------------------|------------------------------------------------------------|
+| `documentation.elementFilter` | [`DocumentationElementFilter`][DocumentationElementFilter] |
 
 ### Source Code
 
@@ -47,3 +49,8 @@ The source code of the open API for **Intellij Translation Plugin** is bundled i
 When you navigate to the relevant classes, if the IDE prompts that the source code cannot be found, you can manually add the source code:  
 Click the `Choose Sources...` link in the editor banner notification, and select the source code jar package (`src/*-src.jar`) bundled in the plugin ZIP distribution.  
 Note: At this point, the IDE has already automatically navigated to the plugin ZIP distribution.
+
+
+[openapi-package]: https://github.com/YiiGuxing/TranslationPlugin/tree/master/src/main/kotlin/cn/yiiguxing/plugin/translate/openapi
+[DocumentationTranslationService]: https://github.com/YiiGuxing/TranslationPlugin/blob/master/src/main/kotlin/cn/yiiguxing/plugin/translate/openapi/documentation/DocumentationTranslationService.kt
+[DocumentationElementFilter]: https://github.com/YiiGuxing/TranslationPlugin/blob/master/src/main/kotlin/cn/yiiguxing/plugin/translate/openapi/documentation/DocumentationElementFilter.kt
