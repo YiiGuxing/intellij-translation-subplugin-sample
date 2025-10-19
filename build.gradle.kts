@@ -21,9 +21,7 @@ dependencies {
         create("IC", "2024.1")
         testFramework(org.jetbrains.intellij.platform.gradle.TestFrameworkType.Platform)
 
-        plugin("cn.yiiguxing.plugin.translate:3.8.0-PREVIEW@preview")
-        // Use release version when available
-        // plugin("cn.yiiguxing.plugin.translate:3.8.0")
+        plugin("cn.yiiguxing.plugin.translate:3.8.0")
     }
 }
 
